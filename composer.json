@@ -1,0 +1,25 @@
+{
+    "name": "lotos/orm",
+    "type": "library",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "McLotos",
+            "email": "mclotos@xakep.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Lotos\\ORM\\": "src/",
+            "Lotos\\ORM\\Abstractions\\": "src/Abstractions/",
+            "Lotos\\ORM\\Adapters\\": "src/Adapters/",
+            "Lotos\\ORM\\Exceptions\\": "src/Exceptions/",
+            "Lotos\\ORM\\Interfaces\\": "src/Interfaces/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.0",
+        "lotos/collection": "*"
+    }
+}
