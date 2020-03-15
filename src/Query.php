@@ -137,6 +137,17 @@ class Query
         }
     }
 
+    public function whereBetween(string $cell, array $limiters) : Query
+    {
+        $word = (substr_count($this->sql, ' where ') == 0)
+            ? ' where '
+            : ' and ';
+        $this->sql .= $word . Utils::getCellName($cell) . ' between :limiter1 and :limiter2 ';
+        $this->params['limiter1'] = $limiters[0];
+        $this->params['limiter2'] = $limiters[1];
+        return $this;
+    }
+
     public function first() : ?Model
     {
         $this->sql .= ' limit 1;';
