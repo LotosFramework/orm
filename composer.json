@@ -20,6 +20,6 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^8.0",
-        "lotos/collection": "*"
+        "php-ds/php-ds": "*"
     }
 }
